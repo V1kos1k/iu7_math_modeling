@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="container" style="max-width:100%">
+      <h3 class="text-center">Равномерное распределение</h3>
+      <div class="row">
+        <div class="col" style="max-width: 50%;">
+          <div id="curve_chart1" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="col" style="max-width: 50%;">
+          <div class="col" id="curve_chart2" style="height: 400px;"></div>
+        </div>
+      </div>
+      <div style="margin-left: 40%; max-width: 200px;">
+          <div class="input-group input-group-sm" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <input type="number" class="form-control" id="valueA" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="input-group input-group-sm" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">&nbsp;&nbsp;&nbsp;b&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <input type="number" class="form-control" id="valueB" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="input-group input-group-sm" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">start</span>
+            </div>
+            <input type="number" class="form-control" id="valueXStart" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="input-group input-group-sm" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">end&nbsp;</span>
+            </div>
+            <input type="number" class="form-control" id="valueXEnd" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <button 
+                  class="btn btn-outline-info mt-4"
+                  style="margin-left:43%" 
+                  type="button"
+                  onclick="uniform()"
+              >
+              Построить
+              </button>
+    </div>
+
+    <div class="container" style="max-width:100%; margin-top: 300px; margin-bottom: 200px;">
+        <h3 class="text-center">Распределение Пуассона</h3>
+        <div class="row">
+          <div class="col" style="max-width: 50%;">
+            <div id="curve_chart3" style="width: 100%; height: 400px;"></div>
+          </div>
+          
+          <div class="col" style="max-width: 50%;">
+            <div class="col" id="curve_chart4" style="height: 400px;"></div>
+          </div>
+        </div>
+        <div style="margin-left: 40%; max-width: 200px;">
+            <div class="input-group input-group-sm" >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">lambda</span>
+              </div>
+              <input type="number" class="form-control" id="valueLambda" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">&nbsp;&nbsp;&nbsp;start&nbsp;&nbsp;</span>
+              </div>
+              <input type="number" class="form-control" id="valueKStart" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm" >
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">&nbsp;&nbsp;&nbsp;end&nbsp;&nbsp;&nbsp;</span>
+              </div>
+              <input type="number" class="form-control" id="valueKEnd" aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+          <button 
+                  class="btn btn-outline-info mt-4"
+                  style="margin-left:43%" 
+                  type="button"
+                  onclick="poisson()"
+              >
+              Построить
+              </button>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
