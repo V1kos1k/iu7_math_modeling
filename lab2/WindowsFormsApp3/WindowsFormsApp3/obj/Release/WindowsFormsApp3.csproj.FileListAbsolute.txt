@@ -1,0 +1,8 @@
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/bin/Release/WindowsFormsApp3.exe.config
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/bin/Release/WindowsFormsApp3.exe
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/bin/Release/WindowsFormsApp3.pdb
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/obj/Release/WindowsFormsApp3.Form1.resources
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/obj/Release/WindowsFormsApp3.Properties.Resources.resources
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/obj/Release/WindowsFormsApp3.csproj.GenerateResource.cache
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/obj/Release/WindowsFormsApp3.exe
+/Users/mkhitaryanviktoriya/Downloads/WindowsFormsApp3/WindowsFormsApp3/obj/Release/WindowsFormsApp3.pdb

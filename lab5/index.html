@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="container" style="max-width: 470px; min-height: 5%; margin: auto;">
+      <div class="row mt-3">
+        <div class="col-3">
+            <p>Генерация заявок</p>
+        </div>
+        <div class="col-3">
+            <input id="request_client"
+              value="10"
+              type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      <!-- </div> -->
+      <!-- <div class="row justify-content-end"> -->
+        <div class="col-1" style="text-align: end">
+          <p>+-</p>
+        </div>
+        <div class="col-3">
+          <input id="dt_request_client"
+            value="2"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row mt-3">
+        <div class="col">
+          <p>Время работы операторов</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-1" style="text-align: end">
+          <p>0</p>
+        </div>
+        <div class="col-4">
+          <input id="request_op0"
+            value="20"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="col-1" style="text-align: end">
+          <p>+-</p>
+        </div>
+        <div class="col-4">
+          <input id="dt_request_op0"
+            value="5"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-1" style="text-align: end">
+          <p>1</p>
+        </div>
+        <div class="col-4">
+          <input id="request_op1"
+            value="40"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="col-1" style="text-align: end">
+          <p>+-</p>
+        </div>
+        <div class="col-4">
+          <input id="dt_request_op1"
+            value="10"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-1" style="text-align: end">
+          <p>2</p>
+        </div>
+        <div class="col-4">
+          <input id="request_op2"
+            value="40"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="col-1" style="text-align: end">
+          <p>+-</p>
+        </div>
+        <div class="col-4">
+          <input id="dt_request_op2"
+            value="20"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <hr />
+      <div class="row mt-4">
+        <div class="col">
+          <p>Время работы компьютера</p>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-3">
+          <p>0</p>
+        </div>
+        <div class="col">
+          <input id="request_comp0"
+            value="15"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-3">
+          <p>1</p>
+        </div>
+        <div class="col">
+          <input id="request_comp1"
+            value="30"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+    <hr />
+
+      <div class="row mt-4">
+        <div class="col-3">
+          <p>Количество заявок</p>
+        </div>
+        <div class="col">
+          <input id="count_requests"
+            value="300"
+            type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+    <hr />
+
+    <div class="row mt-4">
+      <div class="col-3">
+        <p>Вероятность отказа</p>
+      </div>
+      <div class="col">
+        <input id="probability_failure"
+          type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+      <div class="row justify-content-center">
+        <button class="btn btn-primary" onClick="modelling()">Посчитать</button>
+      </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="./index.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

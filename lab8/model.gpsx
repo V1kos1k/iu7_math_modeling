@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExtendedGpssModel>
+  <Lines>
+    <Line Id="1">GENERATE     10,2,,300,</Line>
+    <Line Id="78"></Line>
+    <Line Id="79">; если первый оператор занят, переход ко второму</Line>
+    <Line Id="80">L_OP1    GATE NU    OPER1,L_OP2  </Line>
+    <Line Id="86">    SEIZE    OPER1 </Line>
+    <Line Id="88">    ADVANCE    20,5 </Line>
+    <Line Id="91">    RELEASE    OPER1</Line>
+    <Line Id="93">    TRANSFER    ,L_PC1,,</Line>
+    <Line Id="100">; если второй оператор занят, переход к третьему</Line>
+    <Line Id="101">L_OP2    GATE NU    OPER2,L_OP3    </Line>
+    <Line Id="102">    SEIZE    OPER2</Line>
+    <Line Id="103">    ADVANCE     40,10</Line>
+    <Line Id="104">    RELEASE    OPER2</Line>
+    <Line Id="105">    TRANSFER    ,L_PC1</Line>
+    <Line Id="106"></Line>
+    <Line Id="107">; если и третий оператор занят, заявка не обслуживается</Line>
+    <Line Id="108">L_OP3    GATE NU    OPER3,L_DROP    </Line>
+    <Line Id="109">    SEIZE    OPER3</Line>
+    <Line Id="110">    ADVANCE    40,20</Line>
+    <Line Id="111">    RELEASE    OPER3</Line>
+    <Line Id="112">    TRANSFER    ,L_PC2</Line>
+    <Line Id="113"></Line>
+    <Line Id="114">L_PC1    QUEUE    PC_QUEUE</Line>
+    <Line Id="117">    SEIZE    SPC1</Line>
+    <Line Id="118">    DEPART    PC_QUEUE</Line>
+    <Line Id="121">    ADVANCE    15</Line>
+    <Line Id="122">    RELEASE    SPC1</Line>
+    <Line Id="123">    TRANSFER    ,L_SERVED</Line>
+    <Line Id="124"></Line>
+    <Line Id="125">L_PC2    QUEUE    PC_QUEUE</Line>
+    <Line Id="126">    SEIZE    SPC2</Line>
+    <Line Id="127">      DEPART    PC_QUEUE</Line>
+    <Line Id="128">    ADVANCE    30</Line>
+    <Line Id="129">    RELEASE    SPC2</Line>
+    <Line Id="130"></Line>
+    <Line Id="131">L_SERVED    TRANSFER    ,L_END</Line>
+    <Line Id="132">L_DROP    TRANSFER    ,L_END</Line>
+    <Line Id="133"></Line>
+    <Line Id="134">    ; количество обработанных заявок</Line>
+    <Line Id="135">L_END    SAVEVALUE    TRANS_PROCESSED,N$L_SERVED</Line>
+    <Line Id="136">    ; вероятность потери заявки</Line>
+    <Line Id="137">    SAVEVALUE    TRANS_DROPPED_PROB,((N$L_DROP)/(N$L_END))</Line>
+    <Line Id="138"></Line>
+    <Line Id="139">    TERMINATE    1</Line>
+    <Line Id="140">    START 300</Line>
+    <Line Id="141"></Line>
+  </Lines>
+</ExtendedGpssModel>

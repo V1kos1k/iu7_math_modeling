@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExtendedGpssModel>
+  <Lines>
+    <Line Id="1">GENERATE     5.5,5.5,,1000,</Line>
+    <Line Id="3"></Line>
+    <Line Id="21">    L_PROC QUEUE    SMO_QUEUE</Line>
+    <Line Id="6">    SEIZE     S_USER</Line>
+    <Line Id="7">    DEPART    SMO_QUEUE</Line>
+    <Line Id="8">    ADVANCE    (Poisson(1, 5))</Line>
+    <Line Id="9">    RELEASE    S_USER</Line>
+    <Line Id="22">    TRANSFER     .3,L_END,L_PROC</Line>
+    <Line Id="15">    L_END TERMINATE    1</Line>
+    <Line Id="16">    START 1000</Line>
+  </Lines>
+</ExtendedGpssModel>
